@@ -1,7 +1,7 @@
 # SentenceSeekers
 NodejsWebAppTest contains the javascript version that runs the website.
 sentenceSeekersJavaCode contains a java version that runs standalone in any application that runs java (meant to run in eclipse).
-to run website, open server.ts located in the NodejsWebAppTest folder in visual studio code and run server.ts using visual studio code. Then open a browser and navigate to localhost:1337.
+to run website, open server.ts located in the NodejsWebAppTest folder in visual studio code and run server.ts using visual studio code (you may have to install some npm things into vs code in order to run it). Then open a browser and navigate to localhost:1337.
 to run the java code, open sentenceSeekersJavaCode in eclipse and run sentenceSeekersJavaCode\src\sentenceSeekersJavaCode\sentence.java and enter a string of words.
 
 sentenceSeekersJavaCode\src\sentenceSeekersJavaCode contains the source code for the java version
