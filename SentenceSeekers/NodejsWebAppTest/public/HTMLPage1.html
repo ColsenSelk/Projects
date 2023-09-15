@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Certain Sentence Seekers</title>
+</head>
+<body>
+    <style>
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Times New Roman;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../4.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        ul {
+            float: right;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+
+            ul li {
+                display: inline-block;
+            }
+
+                ul li a {
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 5px 20px;
+                    border: 1px solid transparent;
+                    transition: 0.6s ease;
+                }
+
+                    ul li a:hover {
+                        background-color: : #fff;
+                        color: #000;
+                    }
+
+        .TerraTech2 img {
+            float: left;
+            width: 150px;
+            height: auto;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .title {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+            .title h1 {
+                color: #fff;
+                font-size: 70px;
+            }
+
+        .button {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .sentence {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+        }
+
+        .btn {
+            border: 1px solid #fff;
+            padding: 10px 30px;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.6s ease;
+        }
+
+            .btn:hover {
+                background-color: : #fff;
+                color: #000;
+            }
+
+        .sentence {
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+        }
+    </style>
+
+    <header>
+        <div class="main">
+            <div class="TerraTech2">
+                <img src="TerraTech2.png">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            <h1>Certain Sentence Seekers</h1>
+        </div>
+
+        
+
+        
+
+        
+    </header>
+
+
+    <p style="font-size: 9px; position: absolute; top: 93%; color:white">It's recommended placing verbs in front of nouns, as often words can be both verbs and nouns. <br></br>It's also recommended to place words in the same tense.</p>
+    <div style="width:20%; top:55%; left:45%; margin:0 auto; height: 200px; margin: -100px 0 0 -150px; z-index: 15; position: absolute; font-size: 20px; font-family:Constantia ; text-align: center">
+        <input type="text" id="myText" style="background-color:darkgray ; color:black; font-size: 20px; font-family:Constantia; width: 96%; margin: 0; padding: 2px; text-align:center;border: 2px solid #000000; border-radius: 5px;" placeholder="insert words separated by spaces">
+
+
+
+        <p></p>
+        <div style="right: 50px; width: 100%; font-size: 20px; font-family:Constantia; text-align:center">
+            <button onclick="aFunction()" style="background-color:chartreuse ; color:black ; font-size: 20px; font-family:Impact; text-align:center">Create Sentence</button>
+            <p id="demo" style="background-color:darkgray ; color:black; font-size: 20px; font-family:Constantia; margin: 4px 4px 4px 4px; text-align:center;border: 2px solid #000000; border-radius: 5px;">Result goes here</p>
+        </div>
+
+
+
+        <script src="JavaScriptHtml.js">
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "sentence-seekers-java-code",
+  "version": "0.0.0",
+  "description": "SentenceSeekersJavaCode",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

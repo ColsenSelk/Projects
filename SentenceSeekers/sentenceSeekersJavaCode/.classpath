@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="http-20070405.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="limit-modules" value="java.se,jdk.accessibility,jdk.dynalink,jdk.jartool,jdk.javadoc,jdk.jconsole,jdk.jshell,jdk.jsobject,jdk.management.jfr,jdk.net,jdk.nio.mapmode,jdk.sctp,jdk.security.auth,jdk.security.jgss,jdk.unsupported,jdk.unsupported.desktop,jdk.xml.dom"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="sdk-1.0.jar" sourcepath="sourceforscraperapi"/>
+	<classpathentry kind="lib" path="sdk-1.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="unirest-java-3.11.11.jar"/>
+	<classpathentry kind="lib" path="apache-maven-3.6.3-src.zip"/>
+	<classpathentry kind="lib" path="commons-io-2.8.0.jar"/>
+	<classpathentry kind="lib" path="httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="clj-http-3.12.1.jar"/>
+	<classpathentry kind="lib" path="httpcore-4.4.14.jar"/>
+	<classpathentry kind="lib" path="commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="httpcore-nio-4.4.14.jar"/>
+	<classpathentry kind="lib" path="commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

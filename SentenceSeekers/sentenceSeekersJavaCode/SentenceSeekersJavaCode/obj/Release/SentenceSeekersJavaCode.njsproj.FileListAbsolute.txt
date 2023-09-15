@@ -1,0 +1,3 @@
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\SentenceSeekersJavaCode\SentenceSeekersJavaCode\obj\Release\SentenceSeekersJavaCode.njsproj.CoreCompileInputs.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\SentenceSeekersJavaCode\SentenceSeekersJavaCode\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\SentenceSeekersJavaCode\SentenceSeekersJavaCode\obj\Release\SentenceSeekersJavaCode.njsprojAssemblyReference.cache

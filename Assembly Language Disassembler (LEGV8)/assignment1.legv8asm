@@ -1,0 +1,212 @@
+// Colsen Selk. @ceselk
+B main
+main:
+ADDI X0, XZR, #4096
+//PRNT X0
+ADDI X1, XZR, #1 // X1 = n = 1
+LSL X1, X1, #9 // elements = X0 = 2^9
+SUBI X1, X1, #1 // -1 element
+BL fill // call fill(a, sizeof(a)/8)
+DUMP
+//ADDI X1, XZR, #0 // resets X1
+//ADDI X1, XZR, #1 // X1 = n = 1
+//LSL X1, X1, #9 // elements = X0 = 2^9
+//SUBI X1, X1, #1 // -1 element
+
+BL bs_swap_pass
+DUMP
+
+ADDI X1, XZR, #0
+ADDI X2, XZR, #1 // X2 = n = 1
+LSL X2, X2, #9 // elements = X0 = 2^9
+SUBI X2, X2, #1 // -1 element
+ADDI X3, XZR, #0
+BL binary_search // should return 510 (my address of arrays are backwards)
+
+ADDI X1, XZR, #0
+ADDI X2, XZR, #1 // X2 = n = 1
+LSL X2, X2, #9 // elements = X0 = 2^9
+SUBI X2, X2, #1 // -1 element
+ADDI X3, XZR, #1 // X2 = n = 1
+LSL X3, X3, #9 // elements = X0 = 2^9
+SUBI X3, X3, #2 // -1 element
+BL binary_search // should return 0 (my address of arrays are backwards)
+
+ADDI X1, XZR, #0
+ADDI X2, XZR, #1 // X2 = n = 1
+LSL X2, X2, #9 // elements = X0 = 2^9
+SUBI X2, X2, #1 // -1 element
+ADDI X3, XZR, #1 // X2 = n = 1
+LSL X3, X3, #8 // elements = X0 = 2^9 / 2
+//SUBI X3, X3, #2 // -1 element
+BL binary_search // should return 254 (my address of arrays are backwards)
+
+ADDI X1, XZR, #0
+ADDI X2, XZR, #1 // X2 = n = 1
+LSL X2, X2, #9 // elements = X0 = 2^9
+SUBI X2, X2, #1 // -1 element
+ADDI X3, XZR, #1 // X2 = n = 1
+LSL X3, X3, #9 // elements = X0 = 2^9
+//SUBI X3, X3, #2 // -1 element
+BL binary_search // should return -1
+
+//DUMP // test.
+
+
+
+fill: // X1 = n. call with BL
+SUBI X0, X0, #8 // allocates
+ADD X2, XZR, XZR // X2 = i = 0
+//PRNT X9 // test
+STUR X9, [X0, #0] // stores X9 for fill_for_loop
+B fill_for_loop // goes to fill_for_loop with X2 and X1 (and X0) (because used BL)
+fill_for_loop: // X2 = i, X1 = n.
+SUB X9, X1, X2 // X9 = n - i
+SUBI X9, X9, #1 // X9 = n - i - 1
+SUBI X0, X0, #8 // allocates
+STUR X9, [X0, #0] // places new element
+ADDI X2, X2, #1 // i++
+SUBS XZR, X2, X1 // flags = i - n
+B.MI fill_for_loop // i < n
+BR LR // returns to original fill call
+
+bs_swap_pass: // X1 = n. call with B.
+ADDI X0, XZR, #0
+//PRNT X0
+ADDI X7, XZR, #0
+ADDI X6, XZR, #0
+ADDI X4, XZR, #0 // X4 = num_swaps = 0
+ADDI X3, XZR, #1 // X9 = i = 1
+SUBS XZR, X1, X3 // flags = n - i
+B bs_swap_pass_for
+bs_swap_pass_for:
+//PRNT X1
+LDUR X6, [X0, #0] // a[i-1]
+LDUR X7, [X0, #8] // a[i]
+//PRNT X0
+//ADDI X0, X0, #16
+SUBS XZR, X6, X7 // flags and X12 = a[i] - a[i-1]
+//SUBI SP, SP, #16 // allocates
+//STUR X11, [SP, #8] // stores the element from X0 that will be removed (i - 1) to stack pointer so it can be put back later
+//STUR X10, [SP, #0] // stores the other element (i)
+B.MI bs_swap_pass_if_true // if a[i-1] > a[i] then go to branch
+B bs_swap_pass_if_false // otherwise go to this branch 
+bs_swap_pass_if_true: // essentially swap()
+//LDUR X10, [SP, #0] // a[i-1]
+//PRNT X7 // test
+//PRNT X6 // test
+//LDUR X11, [SP, #8] // a[i]
+//ADDI SP, SP, #16 // pops both from SP
+//SUBI X0, X0, #8 // iterates X0 address
+STUR X7, [X0, #0] // swapped
+STUR X6, [X0, #8] // swapped
+ADDI X0, X0, #8 // moves address of X0 so it grabs the next set
+ADDI X4, X4, #1 // num_swaps++
+ADDI X3, X3, #1 // i++
+ADDI X6, XZR, #0
+ADDI X7, XZR, #0
+SUBS XZR, X3, X1 // flags = i - n
+//ADDS XZR, X0, XZR
+B.MI bs_swap_pass_for
+B bs_swap_pass
+bs_swap_pass_if_false:
+//LDUR X10, [SP, #8] // a[i-1]
+//PRNT X10 // test
+//LDUR X11, [SP, #0] // a[i]
+//PRNT X6
+//PRNT X7
+//ADDI SP, SP, #24 // pops both from SP
+//SUBI X0, X0, #8
+STUR X6, [X0, #0] // not swapped
+STUR X7, [X0, #8] // not swapped
+SUBI X0, X0, #8 // iterates X0 address
+ADDI X3, X3, #1 // i++
+ADDI X7, XZR, #0
+ADDI X6, XZR, #0
+SUBS XZR, X3, X1 // flags = i - n
+//ADDS XZR, X0, XZR
+B.PL bs_swap_pass_for
+SUBS XZR, XZR, X4 // flags = 0 - num_swaps
+//PRNT X5
+B.MI bs_swap_pass
+//PRNT X4
+BR LR
+
+
+
+binary_search: // X1 is start, X2 is end, x3 is value, x4 is return value, X9 is index
+ADDI X4, XZR, #0
+SUBS XZR, X2, X1 // flags = end - start
+B.MI binary_search_neg_one
+ADD X9, X1, X2
+LSR X9, X9, #1
+LSL X0, X9, #3 // a[index] address
+LDUR X10, [X0, #0] // a[index]
+SUBI X11, X10, #0
+STUR X10, [X0, #0]
+SUBI X4, X9, #0 // X4 = index
+SUBS XZR, X11, X3
+B.EQ binary_search_return_index
+SUBS XZR, X3, X11
+B.PL binary_search_gr
+B binary_search_le
+
+
+
+binary_search_gr:
+SUBI X2, X4, #1 // X2 = end = index - 1
+//ADDI X4, XZR, #0
+//PRNT X7
+B binary_search
+
+
+binary_search_le:
+ADDI X1, X4, #1 // X1 = start = index + 1
+//ADDI X4, XZR, #0
+//PRNT X8
+B binary_search
+
+
+
+binary_search_neg_one:
+SUBI X4, XZR, #1 // return value negative one
+PRNT X4
+//PRNT X6
+BR LR
+
+
+binary_search_return_index:
+//LSL X4, X4, #3
+PRNT X4
+//PRNT X5
+BR LR
+
+
+
+
+
+
+
+
+
+
+
+
+
+// test of swapping
+//ADDI X0, XZR, #8
+//LDUR X9, [X0, #0]
+//PRNT X9
+//LDUR X10, [X0, #8]
+//PRNT X10
+//STUR X10, [X0, #0]
+//STUR X9, [X0, #8]
+//ADDI X0, X0, #8
+//LDUR X9, [X0, #0]
+//PRNT X9
+//LDUR X10, [X0, #8]
+//PRNT X10
+//STUR X10, [X0, #0]
+//STUR X9, [X0, #8]
+//PRNT X9
+//PRNT X10
