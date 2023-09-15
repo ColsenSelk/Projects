@@ -1,0 +1,3 @@
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\NodejsWebAppTest\obj\Debug\NodejsWebAppTest.njsproj.CoreCompileInputs.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\NodejsWebAppTest\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\SE186X\SentenceSeekers\NodejsWebAppTest\obj\Debug\NodejsWebAppTest.njsprojAssemblyReference.cache
