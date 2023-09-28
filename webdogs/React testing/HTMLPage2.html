@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Nintendogs game</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script type = "text/babel">
+            //import React from 'react';
+            //import ReactDOM from 'react-dom';
+            //var React = require('react');
+
+            var money = 50.0;
+            class Money extends React.Component {
+            
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        value: null,
+                    };
+                }
+                
+                render() {
+                    return ( 
+                        <p>
+                            {money.toFixed(2)}
+                            <span id="tester">@</span>
+                        </p>
+                    );
+                }
+            }
+
+            ReactDOM.render(
+                <Money />,
+                document.getElementById('all')
+            );
+        </script>
+</head>
+<body style="background-color: #6600ff;">
+    <style>
+        
+    </style>
+
+    <header>
+
+        
+
+        
+
+        
+    </header>
+
+
+
+
+        <div style = "right: 0; left: 0; top: 0; bottom: 0; padding: 0; border: 0; margin: auto; font-family:Constantia;" id = "all">      
+        </div>
+
+        
+        
+        
+        
+
+</body>
+</html>

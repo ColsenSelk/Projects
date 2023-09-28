@@ -26,7 +26,7 @@ const db = mysql.createPool({
 app.use(session({
     secret: 'secret',
     resave: true,
-    saveUninitialized: true,
+    saveUninitialized: true
 }));
 
 //this is needed to grab data from the form
@@ -92,7 +92,7 @@ app.post('/login', function(req, res) {
 
                 //verify that the password entered matches the hashed password
                 if(await bcrypt.compare(password, hashedPassword)){
-                    console.log( username + " is logged in");
+                    console.log("Login successful");
                     res.redirect('/game');
                 } else {
                     console.log("Password incorrect");
@@ -145,6 +145,10 @@ app.post('/createAccount', function(req, res) {
 
 app.get('/game', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/HTMLPage1.html'));
+});
+
+app.post('/game',function(req, res){
+    console.log(req.body);
 });
 
 app.listen(port, () => {

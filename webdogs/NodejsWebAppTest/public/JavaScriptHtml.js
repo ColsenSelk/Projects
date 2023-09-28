@@ -1,5 +1,5 @@
-// AUTHOR: COLSEN SELK
-// HOLDS ALL CODE FOR THE MAIN PAGE, INVENTORY PAGE, STORE PAGE, UPDATES STATS, ETC.
+//import React from 'react';
+//import ReactDOM from 'react-dom';
 
 //#region skillpoints
 var skillpoints = localStorage.getItem('skillpoints') || 0; //hidden number that determines the chance of winning the competition. updates when certain minigames are played
@@ -202,12 +202,84 @@ class inventoryitem {
     // localStorage.setItem('standardfood', standardfood);
     var standardfoodloc = -1;
     var hasgourmetfood = new inventoryitem("gourmetfood", 0);
-    // localStorage.setItem('hasgourmetfood', hasgourmetfood);
+    // localStorage.setItem('gourmetfood', gourmetfood);
     var gourmetfoodloc = -1;
 
 //#endregion
 
 //#region inventory
+    /**
+     * 
+     * @param {String} tempvar 
+     */
+    function unequipfrisbeeinvmenu(tempvar) {
+        if (frisbeeEquipped == "") {
+            // do nothing
+        }
+        else if (frisbeeEquipped == "elitefrisbee" &&  tempvar != "elitefrisbee") {
+            unequipelitefrisbeeinv();
+        }
+        else if (frisbeeEquipped == "pinkfrisbee" && tempvar != "pinkfrisbee") {
+            unequippinkfrisbeeinv();
+        }
+        else if (frisbeeEquipped == "professionalfrisbee" && tempvar != "professionalfrisbee") {
+            unequipprofessionalfrisbeeinv();
+        }
+        else if (frisbeeEquipped == "bluefrisbee" && tempvar != "bluefrisbee") {
+            unequipbluefrisbeeinv();
+        }
+    }
+
+    /**
+     * 
+     * @param {String} tempvar 
+     */
+     function unequipballinvmenu(tempvar) {
+        if (fetchballEquipped == "") {
+            // do nothing
+        }
+        else if (fetchballEquipped == "baseball" &&  tempvar != "baseball") {
+            unequipbaseballinv();
+        }
+        else if (fetchballEquipped == "bouncyball" && tempvar != "bouncyball") {
+            unequipbouncyballinv();
+        }
+        else if (fetchballEquipped == "tennisball" && tempvar != "tennisball") {
+            unequiptennisballinv();
+        }
+    }
+
+    /**
+     * 
+     * @param {String} tempvar 
+     */
+     function unequipcollarinvmenu(tempvar) {
+        if (collarEquipped == "") {
+            // do nothing
+        }
+        else if (collarEquipped == "blackcollar" &&  tempvar != "blackcollar") {
+            unequipblackcollarinv();
+        }
+        else if (collarEquipped == "bluecollar" && tempvar != "bluecollar") {
+            unequipbluecollarinv();
+        }
+        else if (collarEquipped == "goldcollar" && tempvar != "goldcollar") {
+            unequipgoldcollarinv();
+        }
+        else if (collarEquipped == "pinkcollar" && tempvar != "pinkcollar") {
+            unequippinkcollarinv();
+        }
+        else if (collarEquipped == "rainbowcollar" && tempvar != "rainbowcollar") {
+            unequiprainbowcollarinv();
+        }
+        else if (collarEquipped == "whitecollar" && tempvar != "whitecollar") {
+            unequipwhitecollarinv();
+        }
+    }
+
+    
+    
+
     //#region inventory button (for hubpage)
         var inventorybtn = document.createElement("button");
         var inventorybtnstyle = "right: 4.5%; width: 15%; background-color: #5e5e5e; line-height: 75px; bottom: 5%; height: 75px; color: #C9C9C9; font-size: 40px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute; visibility: visible;";
@@ -241,18 +313,29 @@ inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonsty
 inventorymenumenubluefrisbeebutton.innerHTML = "EQUIP";
 inventorymenumenubluefrisbeebutton.ondblclick = function () {
     if (hasbluefrisbee != null) {
+        unequipfrisbeeinvmenu("bluefrisbee");
+
         inventorymenumenubluefrisbeebuttonstyle = "right: -0.5%; width: 25%; background-color: #434343; line-height: 30px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 30px; color: #4E4E4E; font-size: 15px; border-radius: 0; border: 2px #C9C9C9; border-style: solid; text-align: center; position: absolute;";
         inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
         inventorymenumenubluefrisbeebutton.innerHTML = "EQUIPPED";
         inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
         inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
-        
+
         frisbeeEquipped = "bluefrisbee";
     } else {
         //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
     }
 }
 
+function unequipbluefrisbeeinv() {
+    inventorymenumenubluefrisbeebuttonstyle = "right: -0.5%; width: 25%; background-color: #5e5e5e; line-height: 30px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 30px; color: #C9C9C9; font-size: 15px; border-radius: 0; border: 2px #C9C9C9; border-style: solid; text-align: center; position: absolute;";
+    inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
+    inventorymenumenubluefrisbeebutton.innerHTML = "EQUIP";
+    inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #5e5e5e; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
+    inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
+
+    
+}
 function placebluefrisbeeLoc() {
     iterator = iterator + 1;
     bluefrisbeeloc = iterator;
@@ -260,6 +343,14 @@ function placebluefrisbeeLoc() {
     inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
     inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #5e5e5e; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
     inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
+
+    if (frisbeeEquipped == "bluefrisbee") {
+        inventorymenumenubluefrisbeebuttonstyle = "right: -0.5%; width: 25%; background-color: #434343; line-height: 30px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 30px; color: #4E4E4E; font-size: 15px; border-radius: 0; border: 2px #C9C9C9; border-style: solid; text-align: center; position: absolute;";
+        inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
+        inventorymenumenubluefrisbeebutton.innerHTML = "EQUIPPED";
+        inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
+        inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
+    }
 }
 function movedownbluefrisbeeLoc() {
     bluefrisbeeloc = bluefrisbeeloc - 1;
@@ -267,6 +358,14 @@ function movedownbluefrisbeeLoc() {
     inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
     inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #5e5e5e; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
     inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
+
+    if (frisbeeEquipped == "bluefrisbee") {
+        inventorymenumenubluefrisbeebuttonstyle = "right: -0.5%; width: 25%; background-color: #434343; line-height: 30px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 30px; color: #4E4E4E; font-size: 15px; border-radius: 0; border: 2px #C9C9C9; border-style: solid; text-align: center; position: absolute;";
+        inventorymenumenubluefrisbeebutton.style = inventorymenumenubluefrisbeebuttonstyle;
+        inventorymenumenubluefrisbeebutton.innerHTML = "EQUIPPED";
+        inventorymenumenubluefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 26px; bottom: " + (550 - bluefrisbeeloc * 30).toString() + "px; height: 26px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
+        inventorymenumenubluefrisbeediv.style = inventorymenumenubluefrisbeedivstyle;
+    }
 }
 
 var inventorymenumenubluefrisbeediv = document.createElement("div");
@@ -314,52 +413,52 @@ function movedowncompetitionticketLoc() {
 }
 function unplacecompetitionticketLoc() {
     if(competitionticketloc < baseballloc) {
-        //movedownbaseballLoc();
+        movedownbaseballLoc();
     }
     if(competitionticketloc < blackcollarloc) {
-        //movedownblackcollarLoc();
+        movedownblackcollarLoc();
     }
     if(competitionticketloc < bluecollarloc) {
-        //movedownbluecollarLoc();
+        movedownbluecollarLoc();
     }
     if(competitionticketloc < bottledwaterloc) {
         movedownbottledwaterLoc();
     }
     if(competitionticketloc < bouncyballloc) {
-        //movedownbouncyballLoc();
+        movedownbouncyballLoc();
     }
     if(competitionticketloc < elitefrisbeeloc) {
-        //movedownelitefrisbeeLoc();
+        movedownelitefrisbeeLoc();
     }
     if(competitionticketloc < fitnesswaterloc) {
-        //movedownfitnesswaterLoc();
+        movedownfitnesswaterLoc();
     }
     if(competitionticketloc < goldcollarloc) {
-        //movedowngoldcollarLoc();
+        movedowngoldcollarLoc();
     }
     if(competitionticketloc < gourmetfoodloc) {
-        //movedowngourmetfoodLoc();
+        movedowngourmetfoodLoc();
     }
     if(competitionticketloc < pinkcollarloc) {
-        //movedownpinkcollarLoc();
+        movedownpinkcollarLoc();
     }
     if(competitionticketloc < pinkfrisbeeloc) {
-        //movedownpinkfrisbeeLoc();
+        movedownpinkfrisbeeLoc();
     }
     if(competitionticketloc < professionalfrisbeeloc) {
-        //movedownprofessionalfrisbeeLoc();
+        movedownprofessionalfrisbeeLoc();
     }
     if(competitionticketloc < rainbowcollarloc) {
-        //movedownrainbowcollarLoc();
+        movedownrainbowcollarLoc();
     }
     if(competitionticketloc < standardfoodloc) {
         movedownstandardfoodLoc();
     }
     if(competitionticketloc < tennisballloc) {
-        //movedowntennisballLoc();
+        movedowntennisballLoc();
     }
     if(competitionticketloc < whitecollarloc) {
-        //movedownwhitecollarLoc();
+        movedownwhitecollarLoc();
     }
     if(competitionticketloc < bluefrisbeeloc) {
         movedownbluefrisbeeLoc();
@@ -374,6 +473,7 @@ function unplacecompetitionticketLoc() {
 
 
     iterator = iterator - 1;
+
 }
 
 var inventorymenumenucompetitionticketdiv = document.createElement("div");
@@ -385,7 +485,7 @@ var inventorymenumenugourmetfoodbutton = document.createElement("button");
 var inventorymenumenugourmetfoodbuttonstyle = "right: -0.5%; width: 25%; background-color: #5e5e5e; line-height: 30px; bottom: 550px; height: 30px; color: #C9C9C9; font-size: 15px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute; visibility: hidden";
 inventorymenumenugourmetfoodbutton.style = inventorymenumenugourmetfoodbuttonstyle;
 inventorymenumenugourmetfoodbutton.innerHTML = "1/5";
-inventorymenumenugourmetfoodbutton.ondblclick = function () {
+inventorymenumenugourmetfoodbutton.ondblclick = function gourmetfoodbutton () {
     if (hasgourmetfood != null) {
         hasgourmetfood.itemamount = hasgourmetfood.itemamount - 1;
 
@@ -430,56 +530,58 @@ function movedowngourmetfoodLoc() {
 }
 function unplacegourmetfoodLoc() {
     if(gourmetfoodloc < baseballloc) {
-        //movedownbaseballLoc();
+        movedownbaseballLoc();
     }
     if(gourmetfoodloc < blackcollarloc) {
-        //movedownblackcollarLoc();
+        movedownblackcollarLoc();
     }
     if(gourmetfoodloc < bluecollarloc) {
-        //movedownbluecollarLoc();
+        movedownbluecollarLoc();
     }
     if(gourmetfoodloc < bottledwaterloc) {
         movedownbottledwaterLoc();
     }
     if(gourmetfoodloc < bouncyballloc) {
-        //movedownbouncyballLoc();
+        movedownbouncyballLoc();
     }
     if(gourmetfoodloc < elitefrisbeeloc) {
-        //movedownelitefrisbeeLoc();
+        movedownelitefrisbeeLoc();
     }
     if(gourmetfoodloc < fitnesswaterloc) {
-        //movedownfitnesswaterLoc();
+        movedownfitnesswaterLoc();
     }
     if(gourmetfoodloc < goldcollarloc) {
-        //movedowngoldcollarLoc();
+        movedowngoldcollarLoc();
     }
     if(gourmetfoodloc < competitionticketloc) {
         movedowncompetitionticketLoc();
     }
     if(gourmetfoodloc < pinkcollarloc) {
-        //movedownpinkcollarLoc();
+        movedownpinkcollarLoc();
     }
     if(gourmetfoodloc < pinkfrisbeeloc) {
-        //movedownpinkfrisbeeLoc();
+        movedownpinkfrisbeeLoc();
     }
     if(gourmetfoodloc < professionalfrisbeeloc) {
-        //movedownprofessionalfrisbeeLoc();
+        movedownprofessionalfrisbeeLoc();
     }
     if(gourmetfoodloc < rainbowcollarloc) {
-        //movedownrainbowcollarLoc();
+        movedownrainbowcollarLoc();
     }
     if(gourmetfoodloc < standardfoodloc) {
         movedownstandardfoodLoc();
     }
     if(gourmetfoodloc < tennisballloc) {
-        //movedowntennisballLoc();
+        movedowntennisballLoc();
     }
     if(gourmetfoodloc < whitecollarloc) {
-        //movedownwhitecollarLoc();
+        movedownwhitecollarLoc();
     }
     if(gourmetfoodloc < bluefrisbeeloc) {
         movedownbluefrisbeeLoc();
     }
+
+    
     
 
     gourmetfoodloc = -1;
@@ -547,52 +649,52 @@ function movedownstandardfoodLoc() {
 }
 function unplacestandardfoodLoc() {
     if(standardfoodloc < baseballloc) {
-        //movedownbaseballLoc();
+        movedownbaseballLoc();
     }
     if(standardfoodloc < blackcollarloc) {
-        //movedownblackcollarLoc();
+        movedownblackcollarLoc();
     }
     if(standardfoodloc < bluecollarloc) {
-        //movedownbluecollarLoc();
+        movedownbluecollarLoc();
     }
     if(standardfoodloc < bottledwaterloc) {
         movedownbottledwaterLoc();
     }
     if(standardfoodloc < bouncyballloc) {
-        //movedownbouncyballLoc();
+        movedownbouncyballLoc();
     }
     if(standardfoodloc < elitefrisbeeloc) {
-        //movedownelitefrisbeeLoc();
+        movedownelitefrisbeeLoc();
     }
     if(standardfoodloc < fitnesswaterloc) {
-        //movedownfitnesswaterLoc();
+        movedownfitnesswaterLoc();
     }
     if(standardfoodloc < goldcollarloc) {
-        //movedowngoldcollarLoc();
+        movedowngoldcollarLoc();
     }
     if(standardfoodloc < competitionticketloc) {
         movedowncompetitionticketLoc();
     }
     if(standardfoodloc < pinkcollarloc) {
-        //movedownpinkcollarLoc();
+        movedownpinkcollarLoc();
     }
     if(standardfoodloc < pinkfrisbeeloc) {
-        //movedownpinkfrisbeeLoc();
+        movedownpinkfrisbeeLoc();
     }
     if(standardfoodloc < professionalfrisbeeloc) {
-        //movedownprofessionalfrisbeeLoc();
+        movedownprofessionalfrisbeeLoc();
     }
     if(standardfoodloc < rainbowcollarloc) {
-        //movedownrainbowcollarLoc();
+        movedownrainbowcollarLoc();
     }
     if(standardfoodloc < gourmetfoodloc) {
         movedowngourmetfoodLoc();
     }
     if(standardfoodloc < tennisballloc) {
-        //movedowntennisballLoc();
+        movedowntennisballLoc();
     }
     if(standardfoodloc < whitecollarloc) {
-        //movedownwhitecollarLoc();
+        movedownwhitecollarLoc();
     }
     if(standardfoodloc < bluefrisbeeloc) {
         movedownbluefrisbeeLoc();
@@ -665,52 +767,52 @@ function movedownbottledwaterLoc() {
 }
 function unplacebottledwaterLoc() {
     if(bottledwaterloc < baseballloc) {
-        //movedownbaseballLoc();
+        movedownbaseballLoc();
     }
     if(bottledwaterloc < blackcollarloc) {
-        //movedownblackcollarLoc();
+        movedownblackcollarLoc();
     }
     if(bottledwaterloc < bluecollarloc) {
-        //movedownbluecollarLoc();
+        movedownbluecollarLoc();
     }
     if(bottledwaterloc < standardfoodloc) {
         movedownstandardfoodLoc();
     }
     if(bottledwaterloc < bouncyballloc) {
-        //movedownbouncyballLoc();
+        movedownbouncyballLoc();
     }
     if(bottledwaterloc < elitefrisbeeloc) {
-        //movedownelitefrisbeeLoc();
+        movedownelitefrisbeeLoc();
     }
     if(bottledwaterloc < fitnesswaterloc) {
-        //movedownfitnesswaterLoc();
+        movedownfitnesswaterLoc();
     }
     if(bottledwaterloc < goldcollarloc) {
-        //movedowngoldcollarLoc();
+        movedowngoldcollarLoc();
     }
     if(bottledwaterloc < competitionticketloc) {
         movedowncompetitionticketLoc();
     }
     if(bottledwaterloc < pinkcollarloc) {
-        //movedownpinkcollarLoc();
+        movedownpinkcollarLoc();
     }
     if(bottledwaterloc < pinkfrisbeeloc) {
-        //movedownpinkfrisbeeLoc();
+        movedownpinkfrisbeeLoc();
     }
     if(bottledwaterloc < professionalfrisbeeloc) {
-        //movedownprofessionalfrisbeeLoc();
+        movedownprofessionalfrisbeeLoc();
     }
     if(bottledwaterloc < rainbowcollarloc) {
-        //movedownrainbowcollarLoc();
+        movedownrainbowcollarLoc();
     }
     if(bottledwaterloc < gourmetfoodloc) {
         movedowngourmetfoodLoc();
     }
     if(bottledwaterloc < tennisballloc) {
-        //movedowntennisballLoc();
+        movedowntennisballLoc();
     }
     if(bottledwaterloc < whitecollarloc) {
-        //movedownwhitecollarLoc();
+        movedownwhitecollarLoc();
     }
     if(bottledwaterloc < bluefrisbeeloc) {
         movedownbluefrisbeeLoc();
@@ -1148,7 +1250,7 @@ function updatefitnesswaterquantity() {
     if (hasfitnesswater.getitemamount == 0) {
         unplacefitnesswaterLoc();
     }
-    // localStorage.getItem('fitnesswater', fitnesswater);
+    localStorage.getItem('fitnesswater', fitnesswater);
     foodstoremenufitnesswatercount.innerHTML = hasfitnesswater.getitemamount.toString() + "/5";
 }
 
@@ -1638,6 +1740,32 @@ document.getElementById('inventorymenu').appendChild(inventorymenumenustandardfo
 document.getElementById('inventorymenu').appendChild(inventorymenumenustandardfooddiv);
 document.getElementById('inventorymenu').appendChild(inventorymenumenubottledwaterbutton);
 document.getElementById('inventorymenu').appendChild(inventorymenumenubottledwaterdiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenupinkfrisbeebutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenupinkfrisbeediv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuelitefrisbeebutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuelitefrisbeediv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuprofessionalfrisbeebutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuprofessionalfrisbeediv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubaseballbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubaseballdiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubouncyballbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubouncyballdiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenutennisballbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenutennisballdiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenufitnesswaterbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenufitnesswaterdiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenublackcollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenublackcollardiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubluecollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenubluecollardiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenugoldcollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenugoldcollardiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenupinkcollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenupinkcollardiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenurainbowcollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenurainbowcollardiv);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuwhitecollarbutton);
+document.getElementById('inventorymenu').appendChild(inventorymenumenuwhitecollardiv);
 
 //#endregion
 
@@ -1663,7 +1791,8 @@ accessorystoremenupinkcolbutton.ondblclick = function () {
        accessorystoremenupinkcoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 329px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenupinkcoldiv.style = accessorystoremenupinkcoldivstyle;
        updatemoney(-25.0);
-       //TODO: append pinkcollar element to inventory menu.
+       
+       placepinkcollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1688,7 +1817,8 @@ accessorystoremenugoldcolbutton.ondblclick = function () {
        accessorystoremenugoldcoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 285px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenugoldcoldiv.style = accessorystoremenugoldcoldivstyle;
        updatemoney(-50.0);
-       //TODO: append goldcollar element to inventory menu.
+       
+       placegoldcollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1713,7 +1843,8 @@ accessorystoremenublackcolbutton.ondblclick = function () {
        accessorystoremenublackcoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 241px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenublackcoldiv.style = accessorystoremenublackcoldivstyle;
        updatemoney(-25.0);
-       //TODO: append blackcollar element to inventory menu.
+       
+       placeblackcollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1738,7 +1869,8 @@ accessorystoremenurainbowcolbutton.ondblclick = function () {
        accessorystoremenurainbowcoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 197px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenurainbowcoldiv.style = accessorystoremenurainbowcoldivstyle;
        updatemoney(-50.0);
-       //TODO: append rainbowcollar element to inventory menu.
+       
+       placerainbowcollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1763,7 +1895,8 @@ accessorystoremenubluecolbutton.ondblclick = function () {
        accessorystoremenubluecoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 153px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenubluecoldiv.style = accessorystoremenubluecoldivstyle;
        updatemoney(-25.0);
-       //TODO: append bluecollar element to inventory menu.
+       
+       placebluecollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1788,7 +1921,8 @@ accessorystoremenuwhitecolbutton.ondblclick = function () {
        accessorystoremenuwhitecoldivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 109px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
        accessorystoremenuwhitecoldiv.style = accessorystoremenuwhitecoldivstyle;
        updatemoney(-25.0);
-       //TODO: append whitecollar element to inventory menu.
+       
+       placewhitecollarLoc();
 
    } else {
        //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1909,7 +2043,8 @@ if (money >= 200.0 && haselitefrisbee == null) {
    sportsstoremenuelitefrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 218px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenuelitefrisbeediv.style = sportsstoremenuelitefrisbeedivstyle;
    updatemoney(-200.0);
-   //TODO: append elitefrisbee element to inventory menu.
+
+   placeelitefrisbeeLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1934,7 +2069,8 @@ if (money >= 30.0 && hastennisball == null) {
    sportsstoremenutennisballdivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 174px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenutennisballdiv.style = sportsstoremenutennisballdivstyle;
    updatemoney(-30.0);
-   //TODO: append tennisball element to inventory menu.
+
+   placetennisballLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1959,7 +2095,8 @@ if (money >= 30.0 && hasbaseball == null) {
    sportsstoremenubaseballdivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 130px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenubaseballdiv.style = sportsstoremenubaseballdivstyle;
    updatemoney(-30.0);
-   //TODO: append baseball element to inventory menu.
+
+   placebaseballLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -1984,7 +2121,8 @@ if (money >= 50.0 && hasbouncyball == null) {
    sportsstoremenubouncyballdivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 86px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenubouncyballdiv.style = sportsstoremenubouncyballdivstyle;
    updatemoney(-50.0);
-   //TODO: append bouncyball element to inventory menu.
+
+   placebouncyballLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -2009,7 +2147,8 @@ if (money >= 20.0 && haspinkfrisbee == null) {
    sportsstoremenupinkfrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: 42px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenupinkfrisbeediv.style = sportsstoremenupinkfrisbeedivstyle;
    updatemoney(-20.0);
-   //TODO: append pinkfrisbee element to inventory menu.
+
+   placepinkfrisbeeLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -2034,7 +2173,8 @@ if (money >= 400.0 && hasprofessionalfrisbee == null) {
    sportsstoremenuprofessionalfrisbeedivstyle = "left: -0.5%; width: 75%; background-color: #595959; line-height: 40px; bottom: -2px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    sportsstoremenuprofessionalfrisbeediv.style = sportsstoremenuprofessionalfrisbeedivstyle;
    updatemoney(-400.0);
-   //TODO: append professionalfrisbee element to inventory menu.
+
+   placeprofessionalfrisbeeLoc();
 
 } else {
    //TODO: popup message stating insufficient funds, maybe go to work, or win a competition?
@@ -2106,12 +2246,10 @@ foodstoremenufitnesswaterbutton.ondblclick = function () {
         foodstoremenufitnesswatercount.style = foodstoremenufitnesswatercountstyle;
         foodstoremenufitnesswaterdiv.style = foodstoremenufitnesswaterdivstyle;
         updatemoney(-2.0);
-
-        localStorage.setItem('hasfitnesswater', hasfitnesswater);
         if (hasfitnesswater.getitemamount == 1) {
-            //placefitnesswaterLoc();
+            placefitnesswaterLoc();
         }
-        //updatefitnesswaterquantity();
+        updatefitnesswaterquantity();
     } else if (money >= 2.0 && hasfitnesswater.getitemamount < 5) {
         hasfitnesswater.itemamount = hasfitnesswater.itemamount + 1;
         foodstoremenufitnesswaterbuttonstyle = "right: -0.5%; width: 25%; background-color: #5e5e5e; line-height: 44px; bottom: 130px; height: 44px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
@@ -2123,13 +2261,10 @@ foodstoremenufitnesswaterbutton.ondblclick = function () {
         foodstoremenufitnesswatercount.style = foodstoremenufitnesswatercountstyle;
         foodstoremenufitnesswaterdiv.style = foodstoremenufitnesswaterdivstyle;
         updatemoney(-2.0);
-
-        localStorage.setItem('hasfitnesswater', hasfitnesswater);
         if (hasfitnesswater.getitemamount == 1) {
-            //placefitnesswaterLoc();
+            placefitnesswaterLoc();
         }
         updatefitnesswaterquantity();
-        localStorage.get('hasfitnesswater');
 
 }
 else {
@@ -2230,8 +2365,6 @@ foodstoremenustandardfoodbutton.ondblclick = function () {
         foodstoremenustandardfoodcount.style = foodstoremenustandardfoodcountstyle;
         foodstoremenustandardfooddiv.style = foodstoremenustandardfooddivstyle;
         updatemoney(-1.0);
-
-    
         if (hasstandardfood.getitemamount == 1) {
             placestandardfoodLoc();
         }
@@ -2245,7 +2378,7 @@ else {
 
 var foodstoremenustandardfoodcount = document.createElement("div");
 var foodstoremenustandardfoodcountstyle = "right: 24.5%; width: 24.5%; background-color: #5e5e5e; line-height: 40px; bottom: 42px; height: 40px; color: #C9C9C9; font-size: 20px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
-foodstoremenustandardfoodcount.innerHTML = localStorage.getItem('hasstandardfood') || "0/5";
+foodstoremenustandardfoodcount.innerHTML = "0/5";
 foodstoremenustandardfoodcount.style = foodstoremenustandardfoodcountstyle;
 
 var foodstoremenustandardfooddiv = document.createElement("div");
@@ -2352,10 +2485,7 @@ var parkmenubackgroundstyle = "background-color: #5e5e5e; color: #C9C9C9; border
    var parkmenucompetition = document.createElement("button");
    var parkmenucompetitionstyle = "left: -0.5%; width: 51.5%; background-color: #5e5e5e; line-height: 75px; bottom: 35%; height: 75px; color: #C9C9C9; font-size: 25px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
    parkmenucompetition.style = parkmenucompetitionstyle;
-   parkmenucompetition.innerHTML = "Join Competition";
-   parkmenucompetition.ondblclick = function () {
-       setupCompetition();
-   };
+   parkmenucompetition.innerHTML = "Enter Competition";
 //#endregion
 
 //#region parkmenu fetch button initiator
@@ -2447,24 +2577,6 @@ var actionmenueat = document.createElement("button");
 var actionmenueatstyle = "left: -0.5%; width: 51.5%; background-color: #5e5e5e; line-height: 75px; bottom: 35%; height: 75px; color: #C9C9C9; font-size: 25px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
 actionmenueat.style = actionmenueatstyle;
 actionmenueat.innerHTML = "Eat";
-actionmenueat.ondblclick = function() {
-    if (hasgourmetfood != null && hasgourmetfood.getitemamount >= 1) {
-        hasgourmetfood.itemamount = hasgourmetfood.itemamount - 1;
-
-        updategourmetfoodquantity();
-
-        addfoodstat(25);
-        addhappystat(5);
-    }
-    else if (hasstandardfood != null && hasstandardfood.getitemamount >= 1) {
-        hasstandardfood.itemamount = hasstandardfood.itemamount - 1;
-
-        updatestandardfoodquantity();
-
-        addfoodstat(15);
-        addhappystat(-5);
-    }
-}
 //#endregion
 
 //#region actionmenu drink button initiator
@@ -2472,24 +2584,6 @@ var actionmenudrink = document.createElement("button");
 var actionmenudrinkstyle = "right: -0.5%; width: 50%; background-color: #5e5e5e; line-height: 75px; bottom: 35%; height: 75px; color: #C9C9C9; font-size: 25px; border-radius: 0; border-color: #C9C9C9; border: 2px; border-style: solid; text-align: center; position: absolute;";
 actionmenudrink.style = actionmenudrinkstyle;
 actionmenudrink.innerHTML = "Drink";
-actionmenudrink.ondblclick = function() {
-    if (hasfitnesswater != null && hasfitnesswater.getitemamount >= 1) {
-        hasfitnesswater.itemamount = hasfitnesswater.itemamount - 1;
-
-        updatefitnesswaterquantity();
-
-        addwaterstat(30);
-        addhappystat(5);
-    }
-    else if (hasbottledwater != null && hasbottledwater.getitemamount >= 1) {
-        hasbottledwater.itemamount = hasbottledwater.itemamount - 1;
-
-        updatebottledwaterquantity();
-
-        addfoodstat(20);
-        //addhappystat(-5);
-    }
-}
 //#endregion
 
 //#region actionmenu walk button initiator
@@ -2649,8 +2743,6 @@ if (foodstat <= 0.0) {
    return;
 }
 
-// localStorage.setItem('hasfitnesswater', hasfitnesswater); //setting quantity of fitness storage to local 
-
 repeaterfoodstat = setTimeout(updatefoodstat, 800); // adjust last variable to determine how fast foodstat drains
 }
 updatefoodstat();
@@ -2663,15 +2755,16 @@ foodstat = foodstat + numb;
 if (foodstat >= 100) {
    foodstat = 100;
 }
+localStorage.setItem('foodstat', foodstat);
 innerfoodStatElemstyle = "width: " + foodstat + "%; height: 101%; background-color: #FF8800; border: 0; padding: 0; left: -1%;";
 innerfoodStatElem.style = innerfoodStatElemstyle;
-localStorage.setItem('foodstat', foodstat);
 }
 //#endregion
 
 //#region waterstat updaters
 function updatewaterstat() {
 waterstat = waterstat - 0.1;
+localStorage.setItem('waterstat', waterstat);
 innerwaterStatElemstyle = "width: " + waterstat + "%; height: 101%; background-color: #00B9FF; border: 0; padding: 0; left: -1%;";
 innerwaterStatElem.style = innerwaterStatElemstyle;
 
@@ -2681,7 +2774,6 @@ if (waterstat <= 0.0) {
 }
 
 repeaterwaterstat = setTimeout(updatewaterstat, 800); // adjust last variable to determine how fast waterstat drains
-localStorage.setItem('waterstat', waterstat);
 }
 updatewaterstat();
 
