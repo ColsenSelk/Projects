@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\scrollingbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\scrollingbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\spacerace3d.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\spacerace3d.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpaceRace3D",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\SpaceRace3D.csproj",
+              "RelativeDocumentMoniker": "SpaceRace3D\\SpaceRace3D.csproj",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\SpaceRace3D.csproj",
+              "RelativeToolTip": "SpaceRace3D\\SpaceRace3D.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-13T20:18:28.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovementHandler.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs",
+              "RelativeDocumentMoniker": "..\\MiniGolf\\MiniGolf\\MovementHandler.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs",
+              "RelativeToolTip": "..\\MiniGolf\\MiniGolf\\MovementHandler.cs",
+              "ViewState": "AQIAAAoFAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:48:06.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs",
+              "RelativeDocumentMoniker": "..\\MiniGolf\\MiniGolf\\Game1.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs",
+              "RelativeToolTip": "..\\MiniGolf\\MiniGolf\\Game1.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAAAMwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:17:12.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScrollingBackground.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\ScrollingBackground.cs",
+              "RelativeDocumentMoniker": "SpaceRace3D\\ScrollingBackground.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\ScrollingBackground.cs",
+              "RelativeToolTip": "SpaceRace3D\\ScrollingBackground.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T17:08:41.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\Game1.cs",
+              "RelativeDocumentMoniker": "SpaceRace3D\\Game1.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\Game1.cs",
+              "RelativeToolTip": "SpaceRace3D\\Game1.cs",
+              "ViewState": "AQIAAJgBAAAAAAAAAAAkwLgBAAD+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:14:41.813Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

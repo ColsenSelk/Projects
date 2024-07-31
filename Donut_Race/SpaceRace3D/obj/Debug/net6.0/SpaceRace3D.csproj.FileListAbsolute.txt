@@ -1,0 +1,5 @@
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\SpaceRace3D\SpaceRace3D\obj\Debug\net6.0\SpaceRace3D.csproj.AssemblyReference.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\SpaceRace3D\SpaceRace3D\obj\Debug\net6.0\SpaceRace3D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\SpaceRace3D\SpaceRace3D\obj\Debug\net6.0\SpaceRace3D.AssemblyInfoInputs.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\SpaceRace3D\SpaceRace3D\obj\Debug\net6.0\SpaceRace3D.AssemblyInfo.cs
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\SpaceRace3D\SpaceRace3D\obj\Debug\net6.0\SpaceRace3D.csproj.CoreCompileInputs.cache

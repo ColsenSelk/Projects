@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/428461__theearthcollective__engine_6.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/Arial16.spritefont</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/doughnutmonogame.fbx</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/GolfWallColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/Grass.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/paper-fireworks-rocket-001.fbx</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/SoundCheer.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/SoundCollision.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/SpaceRace3D/SpaceRace3D/Content/SpaceBackground.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
