@@ -1,8 +1,10 @@
+using Microsoft.Xna.Framework;
+
 namespace SpaceRace3D
 {
     internal class Collision
     {
-
+        /*
         public bool DealWithCollision(Vector3 goalPos, Vector3 goalRot)
         {
             if (CheckForCollision(goalPos, goalRot))
@@ -150,5 +152,6 @@ namespace SpaceRace3D
 
             return false;
         }
+        */
     }
 }

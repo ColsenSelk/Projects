@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VmqhVbAGD02TNzb1q+k9tFY0EHqvq+SNLNU+3cC4AzkYsmB6kcHWfgYdwlkI51ivPnqQ+lqvlJdL6Ds1npOYuw==",
+  "dgSpecHash": "888Kw5rSdTF1MNIQXqRuAX8cj8ia6tbsVIzVgG4KNzE69ETexhSUopH+4BhNm0n3uUxpoi1NkoGL2i2uijI4nA==",
   "success": true,
   "projectFilePath": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\SpaceRace3D.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\neil\\.nuget\\packages\\bepuphysics\\2.4.0\\bepuphysics.2.4.0.nupkg.sha512",
+    "C:\\Users\\neil\\.nuget\\packages\\bepuutilities\\2.4.0\\bepuutilities.2.4.0.nupkg.sha512",
+    "C:\\Users\\neil\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\neil\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
   "logs": []
 }

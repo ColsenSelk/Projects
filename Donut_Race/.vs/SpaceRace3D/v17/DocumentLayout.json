@@ -11,10 +11,12 @@
       "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\scrollingbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\collision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|solutionrelative:spacerace3d\\collision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8DDDC7A-CEE5-47BE-B7D0-14FB8FA780F7}|SpaceRace3D\\SpaceRace3D.csproj|c:\\users\\neil\\desktop\\semi-important_documents\\engineering\\com s 437\\spacerace3d\\spacerace3d\\spacerace3d.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -32,6 +34,33 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Collision.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\Collision.cs",
+              "RelativeDocumentMoniker": "SpaceRace3D\\Collision.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\Collision.cs",
+              "RelativeToolTip": "SpaceRace3D\\Collision.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAwJwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T21:37:39.174Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\FileController.cs",
+              "RelativeDocumentMoniker": "SpaceRace3D\\FileController.cs",
+              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\FileController.cs",
+              "RelativeToolTip": "SpaceRace3D\\FileController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T21:36:27.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "SpaceRace3D",
               "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\SpaceRace3D.csproj",
@@ -39,31 +68,8 @@
               "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\SpaceRace3D.csproj",
               "RelativeToolTip": "SpaceRace3D\\SpaceRace3D.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-13T20:18:28.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovementHandler.cs",
-              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs",
-              "RelativeDocumentMoniker": "..\\MiniGolf\\MiniGolf\\MovementHandler.cs",
-              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\MovementHandler.cs",
-              "RelativeToolTip": "..\\MiniGolf\\MiniGolf\\MovementHandler.cs",
-              "ViewState": "AQIAAAoFAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T18:48:06.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs",
-              "RelativeDocumentMoniker": "..\\MiniGolf\\MiniGolf\\Game1.cs",
-              "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\MiniGolf\\MiniGolf\\Game1.cs",
-              "RelativeToolTip": "..\\MiniGolf\\MiniGolf\\Game1.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAAMwAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T18:17:12.817Z"
+              "WhenOpened": "2024-03-13T20:18:28.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -73,7 +79,7 @@
               "RelativeDocumentMoniker": "SpaceRace3D\\ScrollingBackground.cs",
               "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\ScrollingBackground.cs",
               "RelativeToolTip": "SpaceRace3D\\ScrollingBackground.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAkAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T17:08:41.509Z",
               "EditorCaption": ""
@@ -86,7 +92,7 @@
               "RelativeDocumentMoniker": "SpaceRace3D\\Game1.cs",
               "ToolTip": "C:\\Users\\neil\\Desktop\\Semi-Important_Documents\\Engineering\\Com S 437\\SpaceRace3D\\SpaceRace3D\\Game1.cs",
               "RelativeToolTip": "SpaceRace3D\\Game1.cs",
-              "ViewState": "AQIAAJgBAAAAAAAAAAAkwLgBAAD+AAAA",
+              "ViewState": "AQIAALYBAAAAAAAAAAAgwOUBAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-13T18:14:41.813Z",
               "EditorCaption": ""

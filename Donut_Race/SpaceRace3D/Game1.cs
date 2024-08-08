@@ -138,13 +138,16 @@ namespace SpaceRace3D
             goalPosition[numGoals] = new Vector3(9000, -5500, 15000 - 4000); goalRotation[numGoals] = new Vector3(0, (float)(Math.PI / 2), 0); goalMade[numGoals] = false; numGoals++;
             goalPosition[numGoals] = new Vector3(9000, -7500, 15000 - 4000); goalRotation[numGoals] = new Vector3(0, (float)(Math.PI / 2), 0); goalMade[numGoals] = false; numGoals++;
 
+            // define initial camera position
             cameraPosition = new Vector3(0.0f, 100.0f, 0.0f);
             cameraTarget = new Vector3(500, 100, 0);
             cameraUpVector = new Vector3(0, 500, 0);
 
+            // set ship velocity and rotation to 0
             shipVelocity = new Vector3(0, 0, 0);
             shipRotation = new Vector3(0, 0, 0);
 
+            // set to default value
             controllerThrottleUsed = false;
 
             throttleAmount = 0;
@@ -486,11 +489,17 @@ namespace SpaceRace3D
                     }
                 }
 
-                if (i == numGoals - 1 && goalMade[i])
+                if (i == numGoals - 1 && goalMade[i]) // win condition
                 {
-                    hasFinished = true;
                     amountPenalty = numGoals - goalCount;
                     finalTimeSeconds = timeSeconds + penaltySeconds * amountPenalty;
+                    if (hasFinished == false)
+                    {
+                        // add time to file
+                        FileController fileController = new FileController();
+                        fileController.WriteFile((int)finalTimeSeconds);
+                    }
+                    hasFinished = true;
                 }
             }
             
@@ -503,7 +512,13 @@ namespace SpaceRace3D
                     "\nAmount of Penalties: " + amountPenalty.ToString(), new Vector2(50, 350), Color.White);
             } else
             {
-                _spriteBatch.DrawString(defaultFont, "Time: " + ((int)(timeSeconds / 60)).ToString() + ":" + (timeSeconds - (((int)(timeSeconds / 60)) * 60)).ToString() + "\nNumber Goals Made: " + goalCount.ToString() + " of " + numGoals.ToString(), new Vector2(50, 350), Color.White);
+                _spriteBatch.DrawString(defaultFont, "Time: " + ((int)(timeSeconds / 60)).ToString() + ":" + (timeSeconds - (((int)(timeSeconds / 60)) * 60)).ToString() + 
+                    "\nNumber Goals Made: " + goalCount.ToString() + " of " + numGoals.ToString(), new Vector2(50, 350), Color.White);
+
+                // draw best time
+                FileController fileController = new FileController();
+                _spriteBatch.DrawString(defaultFont, "Best Time: " + (int)fileController.ReadFile() + " seconds", new Vector2(50, 325), Color.White);
+
                 Rectangle throttleRectangle;
                 if (throttleAmount >= 0)
                 {
