@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/Arial16.spritefont</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/GolfBallColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/GolfFlagColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/GolfLowColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/GolfSlopeColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/GolfWallColsen.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/Grass.png</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/SoundCheer.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/SoundCollision.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/SoundHit.wav</File>
+    <File>C:/Users/neil/Desktop/Semi-Important_Documents/Engineering/Com S 437/MiniGolf/MiniGolf/Content/SoundHoleIn.wav</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
