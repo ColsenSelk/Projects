@@ -1,0 +1,14 @@
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\bin\Debug\net8.0\ReversiTest.exe
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\bin\Debug\net8.0\ReversiTest.deps.json
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\bin\Debug\net8.0\ReversiTest.runtimeconfig.json
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\bin\Debug\net8.0\ReversiTest.dll
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\bin\Debug\net8.0\ReversiTest.pdb
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.AssemblyInfoInputs.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.AssemblyInfo.cs
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.csproj.CoreCompileInputs.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.dll
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\refint\ReversiTest.dll
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.pdb
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ReversiTest.genruntimeconfig.cache
+C:\Users\neil\Desktop\Semi-Important_Documents\Engineering\Com S 437\Reversi\ReversiCodeTest\ReversiTest\obj\Debug\net8.0\ref\ReversiTest.dll
