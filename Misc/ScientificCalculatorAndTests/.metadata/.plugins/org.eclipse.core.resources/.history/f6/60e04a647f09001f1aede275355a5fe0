@@ -1,0 +1,51 @@
+package scientificCalculator;
+
+//import java.util.Scanner;
+
+public class CalculatorUserInput {
+	protected String firstOperand;
+	protected String secondOperand;
+	protected String operation;
+	protected String result;
+	//protected Scanner userInput;
+	protected CalculatorOperations calculatorOperations;
+	protected String whatIsShownOnScreen; // "firstOperand", "secondOperand", "result"
+	
+	public CalculatorUserInput() {
+		firstOperand = "";
+		secondOperand = "";
+		operation = "";
+		result = "";
+		whatIsShownOnScreen = "firstOperand";
+		//userInput = new Scanner(System.in);
+		calculatorOperations = new CalculatorOperations();
+	}
+	
+	public void ReadInput(String str) throws InvalidOperationException {
+		if (str.equalsIgnoreCase("M+") || str.equalsIgnoreCase("M-") || str.equalsIgnoreCase("M-Recall")) {
+			if (str.equalsIgnoreCase("M-Recall")) {
+				if (firstOperand.equalsIgnoreCase("")) { // firstOperand is empty
+					/*if (operation.equalsIgnoreCase("")) {
+						throw new InvalidOperationException("Error: Operation but no Operands");
+					}*/
+					firstOperand = calculatorOperations.MRecall();
+					whatIsShownOnScreen = "firstOperand";
+				}
+				else if (!firstOperand.equalsIgnoreCase("") && )
+			}
+		}
+		if (str.equalsIgnoreCase("M-Clear")) {
+			calculatorOperations.MClear();
+		}
+		if ((str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-") || str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") || str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)"))
+				&& !firstOperand.equalsIgnoreCase("")) {
+			if (str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)")) {
+				operation = str;
+			}
+		}
+		else if (str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-") || str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") || str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)")) {
+			// invalid operation: no first operand
+			throw new InvalidOperationException("Error: No Operand");
+		}
+	}
+}

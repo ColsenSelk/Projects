@@ -1,0 +1,49 @@
+package scientificCalculator;
+
+public class CalculatorOperations {
+	
+	protected float mem;
+	protected boolean memStored;
+	protected boolean operationExecuted;
+	
+	public CalculatorOperations() {
+		mem = 0f;
+		operationExecuted = false;
+		memStored = false;
+	}
+	
+	public float Add(float a, float b) {
+		return a + b;
+	}
+	
+	public float Subtract(float a, float b) {
+		return a - b;
+	}
+	
+	public float Multiply(float a, float b) {
+		return a * b;
+	}
+	
+	public float Divide(float a, float b) {
+		return a / b;
+	}
+	
+	public float Square(float a) {
+		return a * a;
+	}
+	
+	public float SquareRoot(float a) throws InvalidOperationException {
+		if (a < 0) {
+			throw new InvalidOperationException("i");
+		}
+		return (float) Math.sqrt(a);
+	}
+	
+	public float MPlus(float executedOperation) { // add the output of a successfully executed and displayed math operation to the value currently stored in its memory (negative values allowed)
+		if (!operationExecuted) {
+			throw new InvalidOperationException("Error"); // 
+		}
+		return mem + executedOperation;
+	}
+	
+}

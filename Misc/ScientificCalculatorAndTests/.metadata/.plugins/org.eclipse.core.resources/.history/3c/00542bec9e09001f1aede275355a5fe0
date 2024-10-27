@@ -1,0 +1,22 @@
+package scientificCalculator;
+
+import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class CalculatorTests {
+	public CalculatorGUI calculatorGUI;
+	
+	@BeforeEach
+	public void create() {
+		calculatorGUI = new CalculatorGUI();
+	}
+	
+	@Test
+	public void TestOne() { // tests create user, and tests login
+		
+	}
+
+}

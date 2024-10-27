@@ -1,0 +1,76 @@
+package scientificCalculator;
+
+//import java.util.Scanner;
+
+public class CalculatorUserInput {
+	protected String firstOperand;
+	protected String secondOperand;
+	protected String operation;
+	protected String result;
+	//protected Scanner userInput;
+	protected CalculatorOperations calculatorOperations;
+	protected String whatIsShownOnScreen; // "firstOperand", "secondOperand", "result"
+	
+	public CalculatorUserInput() {
+		firstOperand = "";
+		secondOperand = "";
+		operation = "";
+		result = "";
+		whatIsShownOnScreen = "firstOperand";
+		//userInput = new Scanner(System.in);
+		calculatorOperations = new CalculatorOperations();
+	}
+	
+	public void ReadInput(String str) throws InvalidOperationException {
+		if (str.equalsIgnoreCase("M+") || str.equalsIgnoreCase("M-") || str.equalsIgnoreCase("M-Recall")) {
+			if (str.equalsIgnoreCase("M-Recall")) {
+				if (firstOperand.equalsIgnoreCase("")) { // firstOperand is empty
+					firstOperand = calculatorOperations.MRecall();
+					whatIsShownOnScreen = "firstOperand";
+				}
+				else if (!firstOperand.equalsIgnoreCase("") && !operation.equalsIgnoreCase("") && secondOperand.equalsIgnoreCase("")) {
+					secondOperand = calculatorOperations.MRecall();
+					whatIsShownOnScreen = "secondOperand";
+				}
+				else {
+					throw new InvalidOperationException("Error: Invalid Place to Put M-Recall");
+				}
+			}
+			else if (str.equalsIgnoreCase("M+")) {
+				if (whatIsShownOnScreen.equalsIgnoreCase("result")) {
+					if (result.equalsIgnoreCase("")) {
+						throw new InvalidOperationException("Error: Cannot Call M+ on Unexecuted Operation");
+					}
+					result = String.valueOf(calculatorOperations.MPlus(Float.parseFloat(result)));
+				}
+			}
+			else if (str.equalsIgnoreCase("M-")) {
+				if (whatIsShownOnScreen.equalsIgnoreCase("result")) {
+					if (result.equalsIgnoreCase("")) {
+						throw new InvalidOperationException("Error: Tried to change result but result was empty");
+					}
+					result = String.valueOf(calculatorOperations.MPlus(Float.parseFloat(result)));
+				}
+				else if (whatIsShownOnScreen.equalsIgnoreCase("firstOperand")) {
+					if (firstOperand.equalsIgnoreCase("")) {
+						throw new InvalidOperationException("Error: Tried to change first operand but first operand was empty");
+					}
+					firstOperand = String.valueOf(calculatorOperations.MPlus(Float.parseFloat(result)));
+				}
+			}
+		}
+		if (str.equalsIgnoreCase("M-Clear")) {
+			calculatorOperations.MClear();
+		}
+		if ((str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-") || str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") || str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)"))
+				&& !firstOperand.equalsIgnoreCase("")) {
+			if (str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)")) {
+				operation = str;
+			}
+		}
+		else if (str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-") || str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") || str.equalsIgnoreCase("(Square Root)") || str.equalsIgnoreCase("(Square)")) {
+			// invalid operation: no first operand
+			throw new InvalidOperationException("Error: No Operand");
+		}
+	}
+}
